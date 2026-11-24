@@ -1,0 +1,45 @@
+# Build outputs
+build/
+*.o
+*.dylib
+*.dSYM/
+obj/
+bin/
+Release/
+Debug/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local scratch
+listing.txt
+*.log
+
+# Older sources retained
+src.old/
+*.orig
+*.rej
+
+# Project-specific
+firmware/
+xart.bin
+preboot.dump
+apfs_roles.log
+mount_root.log

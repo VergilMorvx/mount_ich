@@ -1,0 +1,233 @@
+================================================================================
+ mount_ich_open — SOURCE-AVAILABLE RESTRICTED LICENSE
+ Version 1.0
+================================================================================
+
+Copyright (c) 2026 vergilmorvx. All rights reserved.
+
+This is NOT an open source license. It is a source-available restricted
+license. You may read the source and you may run it. You may not redistribute
+it, publish it, or ship it in anything. Read this whole file before you do
+anything with the code.
+
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+
+"Software" means every file in this repository: source code, headers, build
+scripts, shell scripts, Python tooling, documentation, and the reverse
+engineering analysis. It does not include the third-party sample binary under
+samples/, which is present for identification only and is not licensed here.
+
+"Licensor" means vergilmorvx.
+
+"You" means the individual or entity exercising rights under this license.
+
+"Distribute" means to publish, upload, host, mirror, sublicense, sell, transfer,
+share, post, or otherwise make available to any third party, in source or
+binary form, whether for free or for payment, whether modified or unmodified,
+whether alone or as part of a larger work. It includes pushing to a public or
+private repository that anyone other than You can access.
+
+"Attribution" means the conspicuous credit described in Section 3.
+
+
+--------------------------------------------------------------------------------
+2. WHAT YOU MAY DO
+--------------------------------------------------------------------------------
+
+Subject to Sections 3 through 6, You MAY:
+
+  (a) read, study, and analyse the Software;
+
+  (b) run the Software, and build and run modified versions of it, on devices
+      and systems You own or control, for personal, non-commercial purposes;
+
+  (c) keep copies of the Software on hardware You own;
+
+  (d) create modified versions for Your own private use only.
+
+
+--------------------------------------------------------------------------------
+3. ATTRIBUTION — MANDATORY, NON-REMOVABLE
+--------------------------------------------------------------------------------
+
+Attribution is not optional and is not conditional on anything.
+
+If any portion of the Software — in whole or in part, modified or unmodified,
+translated, transpiled, ported to another language, restructured, renamed, or
+described — reaches any third party by any means, then the following must be
+present, in a location a recipient will actually see:
+
+  (a) the name "vergilmorvx" as the original author;
+
+  (b) the name of this repository;
+
+  (c) a direct link to the original repository;
+
+  (d) a statement that the material derives from this Software.
+
+This applies even if You rewrote it from scratch after reading it. The
+provisions of Section 4 apply in full whether or not attribution was given.
+
+You may not remove, alter, obscure, or relocate any authorship notice,
+copyright header, or credit block in the Software.
+
+
+--------------------------------------------------------------------------------
+4. WHAT THE LICENSOR CONSIDERS DERIVATION
+--------------------------------------------------------------------------------
+
+The Software contains deliberately unique, non-functional characteristics
+distributed throughout the source, build configuration, and documentation.
+They are not stylistic. They are not needed for the Software to function. They
+exist to establish whether material derives from this Software.
+
+Their presence in another work, in any form, is treated by the Licensor as
+conclusive evidence of derivation, whether or not attribution was given, and
+whether or not the work was presented as original. Their absence, where this
+License records them as present, carries the same weight: an independently
+written work would never have contained them.
+
+The characteristics include, without limitation, particular naming choices,
+an ordering of declared elements, a division of responsibility between two
+functions that is not the obvious one, a specific sequence of sections in the
+project documentation, and distinctive phrasing in the prose.
+
+A sealed, dated enumeration of these characteristics is held by the Licensor
+and is available on request. It is not published, so that a party seeking to
+conceal derivation is left to guess what to remove — including the possibility
+that removing the visible parts removes only the parts that were never
+load-bearing.
+
+You grant the Licensor permission to inspect and compare any work You
+distribute that the Licensor reasonably suspects derives from the Software,
+solely for the purpose of establishing derivation under this section.
+
+
+--------------------------------------------------------------------------------
+5. WHAT YOU MAY NOT DO
+--------------------------------------------------------------------------------
+
+You MAY NOT, without prior written permission from the Licensor:
+
+  (a) distribute the Software, in whole or in part, in any form, by any means;
+
+  (b) publish the Software, or any modified version of it, on any public or
+      private repository, package registry, forum, paste site, archive, or
+      distribution channel;
+
+  (c) incorporate the Software, in whole or in part, into any other project,
+      product, service, application, tool, or codebase;
+
+  (d) use the Software, or any derived work, for any commercial purpose,
+      including paid services, paid support, consulting deliverables, or any
+      product offered for a fee;
+
+  (e) sell, license, sublicense, rent, lease, or otherwise transfer the
+      Software or any rights in it;
+
+  (f) remove, alter, hide, or relocate any notice, header, comment, identifier,
+      or credit described in Sections 3 and 4;
+
+  (g) represent the Software, or any derived work, as Your own original work;
+
+  (h) claim authorship of the Software, or of any derived work, in whole or in
+      part.
+
+Merely reading the Software does not bind You to Section 5. Any act described
+in Section 5(a) through (h) does.
+
+
+--------------------------------------------------------------------------------
+6. TERMINATION
+--------------------------------------------------------------------------------
+
+This license terminates automatically and immediately, without notice, if You
+breach any term of Sections 3, 5, or 4. On termination:
+
+  (a) all rights granted to You under Section 2 end;
+
+  (b) You must destroy every copy of the Software in Your possession or
+      control;
+
+  (c) Sections 3, 4, 7, 8, and 9 survive and remain in force.
+
+Termination does not limit any other remedy available to the Licensor.
+
+
+--------------------------------------------------------------------------------
+7. NO WARRANTY
+--------------------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+The Software manipulates filesystems and storage devices. Running it can
+destroy data or render a device unbootable. It is not tested on real hardware.
+You run it entirely at Your own risk. The Licensor accepts no liability for any
+damage to any device, data, or system arising from use of the Software.
+
+
+--------------------------------------------------------------------------------
+8. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES, HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, ARISING
+IN ANY WAY OUT OF THE USE OF THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+
+
+--------------------------------------------------------------------------------
+9. GENERAL
+--------------------------------------------------------------------------------
+
+  (a) GOVERNING LAW. This license is governed by the laws of the Licensor's
+      country of residence, without regard to conflict of law principles. Where
+      mandatory local consumer or copyright law grants You rights that cannot
+      be waived, those rights prevail over anything here that conflicts with
+      them, and only to that extent.
+
+  (b) SEVERABILITY. If any provision of this license is held unenforceable, the
+      remaining provisions stay in full force. An unenforceable provision is
+      replaced by one that comes closest to its intent.
+
+  (c) NO WAIVER. The Licensor's failure to enforce any provision is not a
+      waiver of that provision or of any other.
+
+  (d) ENTIRE AGREEMENT. This file is the complete agreement between You and the
+      Licensor concerning the Software. It supersedes any prior understanding.
+
+  (e) THIRD-PARTY MATERIAL. The sample binary under samples/ is not covered by
+      this license. It is included solely so that the reverse engineering
+      analysis can be independently verified, under whatever fair use or
+      equivalent doctrine applies in Your jurisdiction. If it is not lawful for
+      You to possess it, do not download that file.
+
+
+--------------------------------------------------------------------------------
+10. WHY THIS IS NOT A STANDARD LICENSE
+--------------------------------------------------------------------------------
+
+This license was written for a specific situation: one person sharing work with
+another person who has a history of presenting that work as his own. It is
+deliberately asymmetrical, deliberately not OSI-approved, and deliberately
+restrictive. It is not suitable for a public project that You want other people
+to build on.
+
+If You want that, use a real open source license — MIT, Apache-2.0, or
+GPL-3.0 — and accept that credit becomes a request rather than a restriction.
+
+This document is a plain-language contract, not legal advice. If a real dispute
+ever arises, consult a lawyer in Your jurisdiction. In most countries the
+automatic copyright You already hold on this work does most of the actual
+enforcement work; this file mainly establishes that You said no clearly, in
+writing, in advance.
+
+================================================================================
+ Contact for permissions: open an issue on the repository.
+================================================================================

@@ -1,0 +1,43 @@
+mount_ich
+Copyright (c) 2026 vergilmorvx. All rights reserved.
+
+This product includes software developed by vergilmorvx.
+Source-available under a restricted license. See LICENSE.
+
+--------------------------------------------------------------------------------
+AUTHORSHIP
+--------------------------------------------------------------------------------
+
+Original author:  vergilmorvx
+Project:          mount_ich
+First published:  2026-11-24
+
+Analysis of the reference build (`mount_ich`, SHA-256
+83524dcf914a408a7cb8c740d4f37fd8f4f6a3be010db098f36568489b731613) was
+performed on 2026-11-22. The reimplementation and this record were published on
+2026-11-24. Git history in the canonical repository is the timestamp of record.
+
+--------------------------------------------------------------------------------
+DERIVATION
+--------------------------------------------------------------------------------
+
+The source, build configuration, and documentation of this project contain
+deliberately unique, non-functional characteristics. They are not stylistic and
+they serve no role in the operation of the software.
+
+Their presence in another work is treated by the copyright holder as evidence
+that the work derives from this one, whether or not attribution was given and
+whether or not it was presented as original. See LICENSE Section 4.
+
+A sealed record of these characteristics is held by the copyright holder.
+
+Copyright holder contact: open an issue on the canonical repository.
+
+--------------------------------------------------------------------------------
+THIRD PARTY
+--------------------------------------------------------------------------------
+
+The third-party binary that this project analyses is not distributed here. See
+samples/README.md for its identity hash.
+
+--------------------------------------------------------------------------------
