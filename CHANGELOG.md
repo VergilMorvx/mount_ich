@@ -18,6 +18,8 @@ Initial open release. Clean-room reimplementation of `mount_ich`
 
 ### Changed from the original
 
+Correctness and structure:
+
 - Every external command runs through `execv` with an argv array instead of
   `sh -c`; no shell involvement anywhere
 - Mount state from `getmntinfo()` instead of forking `mount(8)` on each check
@@ -29,9 +31,24 @@ Initial open release. Clean-room reimplementation of `mount_ich`
 - Unknown arguments rejected with exit code 2 instead of silently becoming
   `auto`
 - One-line structured status output instead of a banner plus prose
-- `mount_filesystems` runs once, and only when the Data layout is wrong
-- Dead `nvram -d oblit-inprogres` call (typo) removed
 - 10-second banner sleep removed
+
+### Behaviour divergences
+
+These are not bug fixes. They change what the program does on a device, and
+they are recorded as differences rather than improvements.
+
+- `mount_filesystems` runs **once**, not three times, and is skipped when the
+  Data layout is already correct. If the helper is not idempotent on some
+  firmware build, the original's second and third invocations did something
+  this version will not do.
+- `nvram` cleanup issues **one** delete (`oblit-inprogress`), not two. The
+  original's second call targeted the misspelled key `oblit-inprogres`, which
+  was almost certainly a no-op — but zero-or-one calls is a different observable
+  state from two.
+
+Neither divergence is believed to matter. Both are documented because claiming
+"complete logic parity" alongside them would be false.
 
 ### Known issues
 

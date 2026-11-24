@@ -42,10 +42,23 @@ Thirteen items, detailed in `IMPROVEMENTS.md`. The four that matter:
    including failure. Success now requires a clean exit *and* output.
 
 Also: `sed` regex replaced with `plutil -extract`; success test no longer
-accepts a half mount; 10-second banner sleep removed; dead `nvram` key typo
-dropped; `mount_filesystems` runs once instead of three times; unknown
-arguments rejected instead of silently becoming `auto`; engine separated from
-CLI behind `mi_mount()` / `mi_result`.
+accepts a half mount; 10-second banner sleep removed; unknown arguments rejected
+instead of silently becoming `auto`; engine separated from CLI behind
+`mi_mount()` / `mi_result`.
+
+### Behaviour divergences
+
+Two changes alter what the program does on a device rather than fixing
+something. They are listed separately because they are not improvements:
+
+- **`nvram` cleanup** issues one delete, not two. The original's second call
+  targeted the misspelled key `oblit-inprogres` and was almost certainly a
+  no-op.
+- **`mount_filesystems`** runs once, not three times. The original's repeat was
+  probably a copy-paste error.
+
+Both are believed harmless. Both are recorded so that "ported faithfully" is not
+claimed alongside them.
 
 ## Known issues
 

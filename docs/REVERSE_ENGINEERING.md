@@ -24,7 +24,10 @@ Everything here comes from the binary. No vendor docs, no guessing.
 | Anti-analysis | None. No packs, no encryption, no obfuscation, no `ptrace` checks |
 
 Written in plain C with stock clang. Trivially readable — which is why the
-reimplementation is near-verbatim rather than approximate.
+behaviour is fully recoverable and every claim below can be checked line by
+line. The reimplementation is not a transcription: it restructures execution,
+removes the shell layer, and changes two observable behaviours. See
+`../IMPROVEMENTS.md` and the divergence table in `../README.md`.
 
 **Contents:** [1 What it is](#1-what-it-is) · [2 Command line](#2-command-line) ·
 [3 Execution order](#3-execution-order) · [4 Functions](#4-recovered-functions) ·

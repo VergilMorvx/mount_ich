@@ -259,6 +259,13 @@ code after writing it — which lowers confidence in the rest of the sequence.
 
 **Fix.** Dropped. One delete, correctly spelled.
 
+**This is a behaviour divergence, not just a bug fix.** The original issued two
+`nvram` writes against different key names; this implementation issues one
+against the correctly spelled key. On a device where some other component relies
+on the misspelled key existing in a cleared state, the observable result
+differs. That is unlikely, and the misspelled key is almost certainly a typo
+that always failed silently — but it is a difference, and it is recorded as one.
+
 **Files.** `src/mount_ich.c` — `sep_load_and_mount_data()`.
 
 ---
@@ -280,6 +287,14 @@ right:
 if (path_is_dir("/mnt2/containers/Data/System") || path_is_dir("/mnt2/root"))
     return;
 ```
+
+**This is a behaviour divergence.** The original invoked the helper three
+times. If that helper is not idempotent on some firmware build, the second and
+third invocations did something this implementation will not do. It is most
+likely a copy-paste error — the disassembly shows three identical
+`bl _run_quiet` calls on the same stack string with no condition between them —
+but "most likely" is not "certainly", and the change is recorded as a
+divergence rather than presented as a pure improvement.
 
 **Files.** `src/mount_ich.c` — `strategy_universal()`.
 
@@ -325,7 +340,7 @@ you can drop.
 
 | Original | Fix |
 |---|---|
-| `mkdir` return values ignored, no `-p` semantics, strays if mountpoint exists as a file | same behaviour, but `prepare_mountpoints()` is a single table-driven loop |
+| `mkdir` return values ignored, no `-p` semantics, strays if mountpoint exists as a file | unchanged behaviour; `prepare_mountpoints()` is a table-driven loop over six paths at mode `0755`, returns are still ignored |
 | Success/failure strings differ in wording (`mount done` vs `mount failed please report to the ich developer`) | one consistent one-line format for both |
 | `sleep(10)` and banner make the tool untestable in CI | removed |
 | Hardcoded `0755` on mountpoints, no mode check | unchanged, but documented |

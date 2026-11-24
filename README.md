@@ -37,12 +37,28 @@ contract to remember.
 
 | | |
 |---|---|
-| Logic parity with original | complete |
+| Logic parity with original | intentional divergences, see below |
 | Shell injection | removed |
 | `disk0s1sN` support | added |
 | Shell-out on every mount check | removed (`getmntinfo`) |
 | Structured result for embedding | added |
 | Tests | host checks only (`./tests/test.sh`); device test pending |
+
+### Intentional divergences from the original
+
+These are behaviour changes, not bug fixes. Each is deliberate; the reasoning
+is in `IMPROVEMENTS.md`.
+
+| Change | Original | This implementation | Rationale |
+|---|---|---|---|
+| `nvram` cleanup | two deletes: `oblit-inprogress` and `oblit-inprogres` | one delete: `oblit-inprogress` | the second key is misspelled, so that call was a no-op (`IMPROVEMENTS.md` §9) |
+| `mount_filesystems` | executed three times in a row | executed once | idempotent helper; the repeat was likely a copy-paste error (`IMPROVEMENTS.md` §10) |
+| Failure signal | `run_capture` returned success on any outcome | requires clean exit and output | a missing tool and a working tool were indistinguishable (`IMPROVEMENTS.md` §6) |
+| Success test | `/mnt1` alone counted as success in any mode | `/mnt1` only counts in `safe` mode | a half mount was reported as a full one (`IMPROVEMENTS.md` §7) |
+| Unknown arguments | silently treated as `auto` | rejected, exit code 2 | silent escalation to a mode that writes to Data (`IMPROVEMENTS.md` §11) |
+
+Everything else — mountpoints, mode vocabulary, role discovery, SEP ordering,
+the two-layout success test, the `find` fallback — is ported as-is.
 
 ## Layout
 
